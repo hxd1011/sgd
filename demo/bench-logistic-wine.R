@@ -34,7 +34,7 @@ log.lik <- function(theta.est) {
   sum(y * log(eta) + (1-y) * log(1-eta))
 }
 
-theta.glm <- matrix(as.numeric(fit$coefficients), ncol=1)
+theta.glm <- matrix(as.numeric(fit.glm$coefficients), ncol=1)
 theta.sgd <- matrix(as.numeric(fit.sgd$coefficients), ncol=1)
 log.lik.glm <- log.lik(fit.glm$coefficients)
 log.lik.sgd <- log.lik(theta.sgd)
